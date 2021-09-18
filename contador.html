@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador</title>
+
+    <!-- agregamos la etiqueta style para poder activar el contador -->
+    <style>
+        body{
+            /* game es el nombre de nuestro juego! */
+            counter-reset: game;
+        }
+        input:checked{
+            /* incrementara al tildar el checkbox pero necesitamos agregar en la clase la porpiedad content y pseudo elemento! */
+            counter-increment: game;
+        }
+        .total-count::after{
+            /* agregamos un pseudo elemento para que se agregue el contador! */
+            content: counter(game);
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+        <li>
+            <input type="checkbox">
+            <div class="shield"></div>
+        </li>
+    </ul>
+
+    <h3 class="total-count">Score: </h3>
+
+</body>
+</html>
