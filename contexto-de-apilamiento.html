@@ -173,7 +173,78 @@
 
         }
 
-    </style>
+        /* estilizando el conejos */
+        .left-ear--outer{
+            background: black;
+            border-radius: 90%; /* ovalado */
+            width: 20px;            
+            height: 50px;
+            /* para poder trabajar con las propiedades left right top y bottom! */
+            position: absolute;
+            left: 10px;
+        }
+        .left-ear--inner{
+            background: pink;
+            border-radius: 90%; /* ovalado */
+            width: 10px;            
+            height: 50px;
+            /* para poder trabajar con las propiedades left right top y bottom! */
+            position: absolute;
+            left: 15px;
+            top: 8px;
+        }
+        .right-ear--outer{
+            background: black;
+            border-radius: 90%; /* ovalado */
+            width: 20px;            
+            height: 50px;
+            /* para poder trabajar con las propiedades left right top y bottom! */
+            position: absolute;
+            right: 10px;
+        }
+        .right-ear--inner{
+            background: pink;
+            border-radius: 90%; /* ovalado */
+            width: 10px;            
+            height: 50px;
+            /* para poder trabajar con las propiedades left right top y bottom! */
+            position: absolute;
+            right: 15px;
+            top: 8px;
+        }
+        
+        .head{
+            /* lo definimos como absolute para que pertenezca como hijo             */
+            position: absolute;
+            /* para centrar la cabeza con respecto al padre y que empiece desde abajo */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+
+            /* definimos el size del muro */
+            width: 60px;
+            height: 60px;
+            background: black;
+            border-radius: 50%;         
+        }
+
+        .head_eye{
+            background: cyan;
+            border-radius: 50%;
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 15px;
+        }
+        .head_eye--left{
+            left: 20px;
+        }
+        .head_eye--right{
+            right: 20px;
+        }
+
+</style>
 
 </head>
 <body>
@@ -181,8 +252,25 @@
     <!-- con este comando generamos la cantidad de div con layers que deseemos -->
     <!-- phone tendra posicionamiento relativo -->
     <div class="phone">
-        <!-- los hijos tendr posicionamiento absoluto para que se adiera (se mueva junto) al relativo -->
-        <div class="layer-1"></div>
+    <!-- los hijos tendran posicionamiento absoluto para que se adiera (se mueva junto) al relativo -->
+    
+    <!--Bunny 1-->
+        <div class="layer-1">
+            <!-- defino las ojejas -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <!-- defino la cabeza -->
+            <div class="head">
+                <!-- defino los ojos, donde el espacion me permite darle mejor estilos -->
+                <div class="head_eye head_eye--left"></div>
+                <div class="head_eye head_eye--right"></div>
+            </div>
+        </div>
+    <!--fin Bunny 1-->
+
+
         <div class="layer-2"></div>
         <div class="layer-3"></div>
         <div class="layer-4"></div>
