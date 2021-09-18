@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contexto de apilamiento</title>
+
+    <style>
+        body{
+            /* eliminamos los margenes por defecto */
+            margin: 0; 
+
+            /* definimos el total de vizulizacion */
+            width: 100%;
+            height: 100vh;
+
+            /* los elementos se centraran tanto horizontal como verticalmente */
+            display: grid;
+            place-items: center;
+        }
+
+        .phone{
+            position: relative;
+            /* definimos las medidas, color, etc del div */
+            border: 8px solid black;
+            border-radius: 20px;
+            width: 300px;
+            height: 600px;
+            background: #ccefff;
+            
+            /* agregamos efecto de sombra del telefono */
+            box-shadow:
+                0 19px 38px rgba(0, 0,0, 0.30),
+                0 15px 12px rgba(0, 0, 0, 0.22)
+            ;
+        }
+
+        /* los layers deberan ser absolute y se les agrega el z index para poder moverlos como capas independientes */
+        .layer-1{
+            position: absolute;
+            z-index: 1;
+            
+            /* definimos el tamanio del conejo1 */
+            height: 450px;
+            width: 80px;
+
+            /* definimos el color y posicion del conejo2 */
+            background: white;
+            bottom: 0;
+            left: 60px;
+        }
+        .layer-2{
+            position: absolute;
+            z-index: 2;
+
+            /* definimos el tamanio del conejo2 */
+            height: 450px;
+            width: 80px;
+
+            /* definimos el color y posicion del conejo2 */
+            background: white;
+            bottom: 0;
+            right: 60px;
+        }
+        .layer-3{
+            position: absolute;
+            z-index: 3;
+
+            /* para centrar el muro y que empiece desde abajo */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0;
+
+            /* definimos el size del muro */
+            width: 220px;
+            height: 400px;
+            background: wheat;
+        }
+        
+        .layer-4{
+            position: absolute;
+            z-index: 4;
+        }
+        .layer-5{
+            position: absolute;
+            z-index: 5;
+        }
+        .layer-6{
+            position: absolute;
+            z-index: 6;
+        }
+        .layer-7{
+            position: absolute;
+            z-index: 7;
+        }
+        .layer-8{
+            position: absolute;
+            z-index: 8;
+        }
+        .layer-9{
+            position: absolute;
+            z-index: 9;
+        }
+        .layer-10{
+            position: absolute;
+            z-index: 10;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- div.phone>div.layer-$*10 + TAB -->
+    <!-- con este comando generamos la cantidad de div con layers que deseemos -->
+    <!-- phone tendra posicionamiento relativo -->
+    <div class="phone">
+        <!-- los hijos tendr posicionamiento absoluto para que se adiera (se mueva junto) al relativo -->
+        <div class="layer-1"></div>
+        <div class="layer-2"></div>
+        <div class="layer-3"></div>
+        <div class="layer-4"></div>
+        <div class="layer-5"></div>
+        <div class="layer-6"></div>
+        <div class="layer-7"></div>
+        <div class="layer-8"></div>
+        <div class="layer-9"></div>
+        <div class="layer-10"></div>
+    </div>
+</body>
+</html>
+
+
+
