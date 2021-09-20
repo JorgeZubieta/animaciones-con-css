@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contexto de apilamiento</title>
+    <title>Kaito's Land</title>
 
     <style>
+        
         body{
             /* eliminamos los margenes por defecto */
             margin: 0; 
@@ -17,8 +18,19 @@
 
             /* los elementos se centraran tanto horizontal como verticalmente */
             display: grid;
+
+            /* agregamos para el contador */
+            counter-reset: score;
             place-items: center;
+
         }
+
+
+        .total-count::after{
+            /* agregamos un pseudo elemento para que se agregue el contador! */
+            content: counter(game);
+        }
+
 
         .phone{
         position: relative;
@@ -27,17 +39,22 @@
             border-radius: 20px;
             width: 300px;
             height: 600px;
-            background: #595959;
+
+            /* background: #595959; */
+            background: #c31432;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #c31432,#240b36);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #c31432,#240b36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
             /* nota : el frame del phone esta como layer 11 */
         }
 
         .moon{
-            width: 50px;
-            height: 50px;
-            background: rgb(250, 249, 249);
+            width: 30px;
+            height: 30px;
+            background: rgb(223, 220, 220);
             border-radius: 50%;
             position: absolute;
-            top: 20px;
+            top: 90px;
             right: 30px;
         }
 
@@ -86,37 +103,32 @@
             }
         }
 
-        .layer-1 input[type=checkbox]{
-            position: absolute;
+        /* ahora generalice el estilo de los inputs para que no vieran y alteren visualmente! */
+        input[type=checkbox]{
+            position: relative;
             appearance: none;
-            /* cursor: pointer;
-            z-index: 1;
-            width: 100%;
-            height: 80px; */
+
+            /* para el contador */
+            cursor: pointer;
+            height: 50px;
+            width: 80px;   
+            margin: 0;
+            z-index: 2;
+
         }
-        .layer-2 input[type=checkbox]{
-            position: absolute;
+
+        input[type=checkbox]:focus{
             appearance: none;
-            /* cursor: pointer;
-            z-index: 1;
-            width: 100%;
-            height: 80px; */
+            outline: none;
         }
-        .layer-4 input[type=checkbox]{
-            position: absolute;
-            appearance: none;
-            /* cursor: pointer;
-            z-index: 1;
-            width: 100%;
-            height: 80px; */
+
+        input:checked{
+            /* incrementara al tildar el checkbox pero necesitamos agregar en la clase la porpiedad content y pseudo elemento! */
+            counter-increment: score;
         }
-        .layer-6 input[type=checkbox]{
-            position: absolute;
-            appearance: none;
-            /* cursor: pointer;
-            z-index: 1;
-            width: 100%;
-            height: 80px; */
+
+        .score::after{
+            content: counter(score);
         }
 
         .layer-2{
@@ -300,7 +312,7 @@
         }
 
         .layer-11{
-            /* marco del tlefono */
+            /* marco del telefono */
             z-index: 11;
             position: absolute;
             /* definimos las medidas, color, etc del div */
@@ -325,6 +337,7 @@
             /* para poder trabajar con las propiedades left right top y bottom! */
             position: absolute;
             left: 10px;
+            top: 0;
         }
         .left-ear--inner{
             background: pink;
@@ -344,6 +357,7 @@
             /* para poder trabajar con las propiedades left right top y bottom! */
             position: absolute;
             right: 10px;
+            top: 0;
         }
         .right-ear--inner{
             background: pink;
@@ -420,11 +434,34 @@
             ;
         }
 
+        
+        .title{
+            /* color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+            /* ------ */
+            position: absolute;
+            left: 15px;
+            top: 30px;
+        }
+        img{
+            position: absolute;
+            left: 10px;
+            /* ----- */
+            width: 250px;
+            height: 40px;
+        }
+        .total-count{
+            color: white;
+            position: absolute;
+            left: 30px;
+            top: 50px;
+        }
+    /* fin-agregamos el contador */
+    
     </style>
-
 </head>
 <body>
-    <!-- div.phone>div.layer-$*10 + TAB -->
+    <!-- nota : div.phone>div.layer-$*10 + TAB -->
     <!-- con este comando generamos la cantidad de div con layers que deseemos -->
     <!-- phone tendra posicionamiento relativo -->
     <div class="phone">
@@ -433,7 +470,6 @@
     <!-- moon -->
         <div class="moon"></div>
     <!-- fin-moon -->
-
 
     <!-- Bunny1 -->
         <div class="layer-1">
@@ -517,6 +553,14 @@
         <div class="layer-10"></div>
         <div class="layer-10B"></div>
         <div class="layer-11"></div>
+        
+        <!-- Titulo y puntuacion -->
+        <div class="title">
+            <a href="https://fontmeme.com/super-mario-font/"><img src="https://fontmeme.com/permalink/210920/171be567c75fd7ab93f2d765818bd59a.png" alt="kaitos land picture" border="0"></a>
+        </div>
+        <h2 class="total-count">
+            Score :
+        </h2>
     </div>
 </body>
 </html>
