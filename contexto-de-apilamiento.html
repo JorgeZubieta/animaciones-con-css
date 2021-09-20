@@ -54,6 +54,69 @@
             /* background: white; */
             bottom: 0;
             left: 60px;
+
+            /* agregamos la animacion de saltar definiendo el nombre de la animacion*/
+                /* animation-name: jump; lo movimos con los demas efectos que se repiten para todos! */
+                animation-duration: 6s;
+
+            /* agregamos la aceleracion con o sin cubic-bezier o una por defecto como el utilizado en este caso*/
+                /* animation-timing-function: ease-in-out; */
+                /* con inifinite va a hacer que salte infinitamente */
+                /* animation-iteration-count: infinite; */
+        }
+
+        .layer-1, .layer-2, .layer-4, .layer-6{
+            /* agregamos la animacion de saltar definiendo el nombre de la animacion*/
+                animation-name: jump;
+            /* agregamos la aceleracion con o sin cubic-bezier o una por defecto como el utilizado en este caso*/
+                animation-timing-function: ease-in-out;
+                /* con inifinite va a hacer que salte infinitamente   */
+                animation-iteration-count: infinite;
+        }
+
+        @keyframes jump{
+            0%{
+                bottom: 0;
+            }
+            50%{
+                bottom: -80px;
+            }
+            100%{
+                bottom: 0;
+            }
+        }
+
+        .layer-1 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            /* cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px; */
+        }
+        .layer-2 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            /* cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px; */
+        }
+        .layer-4 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            /* cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px; */
+        }
+        .layer-6 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            /* cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px; */
         }
 
         .layer-2{
@@ -68,6 +131,9 @@
             /* background: white; */
             bottom: 0;
             right: 60px;
+
+            /* animation-name: jump; */
+            animation-duration: 1.3s;
         }
 
         .layer-3{
@@ -97,6 +163,8 @@
             /* background: white; */
             bottom: 0;
             left: 15px;
+
+            animation-duration: 1s;
         }
 
         .layer-5{
@@ -122,6 +190,8 @@
             /* background: white; */
             bottom: 0;
             right: 45px;
+
+            animation-duration: 0.5s;
         }
         .layer-7{
             position: absolute;
@@ -335,7 +405,6 @@
             }
         }
 
-
         .head_eye--left{
             left: 20px;
         }
@@ -368,6 +437,8 @@
 
     <!-- Bunny1 -->
         <div class="layer-1">
+        <!-- agregamos el input checkbox que sera hijo para poder utilizar el contador -->
+        <input type="checkbox">
             <!-- defino las ojejas -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -384,6 +455,7 @@
 
     <!-- Bunny2 -->
         <div class="layer-2">
+            <input type="checkbox">
             <!-- defino las ojejas -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -402,6 +474,7 @@
     
     <!-- Bunny3 -->
         <div class="layer-4">
+            <input type="checkbox">
             <!-- defino las ojejas -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -420,6 +493,7 @@
 
     <!-- Bunny4 -->    
         <div class="layer-6">
+            <input type="checkbox">
             <!-- defino las ojejas -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
