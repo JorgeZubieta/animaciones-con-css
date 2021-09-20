@@ -28,7 +28,7 @@
 
         .total-count::after{
             /* agregamos un pseudo elemento para que se agregue el contador! */
-            content: counter(game);
+            content: counter(score);
         }
 
 
@@ -103,7 +103,7 @@
             }
         }
 
-        /* ahora generalice el estilo de los inputs para que no vieran y alteren visualmente! */
+        /* ahora generalice el estilo de los inputs para que no vieran y no alteren visualmente! */
         input[type=checkbox]{
             position: relative;
             appearance: none;
@@ -312,6 +312,8 @@
         }
 
         .layer-11{
+            /* que para los evetos esta capa sea invisible, para el mouse! */
+            pointer-events: none;
             /* marco del telefono */
             z-index: 11;
             position: absolute;
@@ -471,10 +473,13 @@
         <div class="moon"></div>
     <!-- fin-moon -->
 
+
+
     <!-- Bunny1 -->
         <div class="layer-1">
+            <label>
         <!-- agregamos el input checkbox que sera hijo para poder utilizar el contador -->
-        <input type="checkbox">
+            <input type="checkbox" />
             <!-- defino las ojejas -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -486,12 +491,13 @@
                 <div class="head_eye head_eye--left"></div>
                 <div class="head_eye head_eye--right"></div>
             </div>
+        </label>
         </div>
     <!-- fin-Bunny1 -->
 
     <!-- Bunny2 -->
         <div class="layer-2">
-            <input type="checkbox">
+            <input type="checkbox" />
             <!-- defino las ojejas -->
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
@@ -564,6 +570,3 @@
     </div>
 </body>
 </html>
-
-
-
