@@ -21,19 +21,24 @@
         }
 
         .phone{
-            position: relative;
+        position: relative;
             /* definimos las medidas, color, etc del div */
-            border: 8px solid black;
+            /* border: 8px solid black; */
             border-radius: 20px;
             width: 300px;
             height: 600px;
-            background: #ccefff;
-            
-            /* agregamos efecto de sombra del telefono */
-            box-shadow:
-                0 19px 38px rgba(0, 0,0, 0.30),
-                0 15px 12px rgba(0, 0, 0, 0.22)
-            ;
+            background: #595959;
+            /* nota : el frame del phone esta como layer 11 */
+        }
+
+        .moon{
+            width: 50px;
+            height: 50px;
+            background: rgb(250, 249, 249);
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 30px;
         }
 
         /* los layers deberan ser absolute y se les agrega el z index para poder moverlos como capas independientes */
@@ -46,7 +51,7 @@
             width: 80px;
 
             /* definimos el color y posicion del conejo2 */
-            background: white;
+            /* background: white; */
             bottom: 0;
             left: 60px;
         }
@@ -60,10 +65,11 @@
             width: 80px;
 
             /* definimos el color y posicion del conejo2 */
-            background: white;
+            /* background: white; */
             bottom: 0;
             right: 60px;
         }
+
         .layer-3{
             position: absolute;
             z-index: 3;
@@ -77,7 +83,7 @@
             /* definimos el size del muro */
             width: 220px;
             height: 400px;
-            background: wheat;
+            background: black;
             border-radius: 10px;
         }
 
@@ -88,48 +94,45 @@
             height: 350px;
             width: 80px;
             /* definimos el color y posicion del conejo3 */
-            background: white;
+            /* background: white; */
             bottom: 0;
-            left: 50px;
+            left: 15px;
         }
 
         .layer-5{
             position: absolute;
             z-index: 5;
-            /* para centrar el muro 5 y que empiece desde abajo */
-            /* left: 0;
-            right: 0; */
             margin: 0 auto;
-            bottom: 0;
-            /* definimos el size del muro 5 */
+            bottom: 10px;
+            left: 0px;
+            /* definimos el size del muro 2 */
             width: 200px;
-            height: 300px;
-            background: brown;
+            height: 290px;
+            background: black;
             border-radius: 10px;
         }
 
         .layer-6{
             position: absolute;
             z-index: 6;
-            /* definimos el tamanio del conejo6 */
+            /* definimos el tamanio del conejo4 */
             height: 200px;
             width: 80px;
-            /* definimos el color y posicion del conejo6 */
-            background: white;
+            /* definimos el color y posicion del conejo4 */
+            /* background: white; */
             bottom: 0;
-            right: 30px;
+            right: 45px;
         }
         .layer-7{
             position: absolute;
             z-index: 7;
-            /* para centrar el muro a la derecha y que empiece desde abajo */
-            right: 0;
+            /* muro 3 a la derecha y que empiece desde abajo */
+            right: 20px;
             bottom: 0;
-
-            /* definimos el size del muro */
+            /* definimos el size del muro 3 */
             width: 150px;
             height: 150px;
-            background: wheat;
+            background: black;
             border-radius: 10px;
         }
         .layer-8{
@@ -141,9 +144,38 @@
             bottom: 0;
             margin: 0 auto;
             /* definimos el size del pasto */
-            width: 200px;
-            height: 100px;
-            background: greenyellow;
+            width: 80px;
+            height: 120px;
+            border-radius: 40px;
+            background: rgb(19, 54, 19);
+        }
+        .layer-8b{
+            position: absolute;
+            z-index: 8;
+            /* para centrar el pasto y que empiece desde abajo */
+            /* right: 0; */
+            left: 55px;
+            bottom: 0;
+            margin: 0 auto;
+            /* definimos el size del pasto */
+            width: 100px;
+            height: 90px;
+            border-radius: 50%;
+            background: rgb(19, 54, 19);
+        }
+        .layer-8c{
+            position: absolute;
+            z-index: 8;
+            /* para centrar el pasto y que empiece desde abajo */
+            right: 50px;
+            /* left: ; */
+            bottom: 0;
+            margin: 0 auto;
+            /* definimos el size del pasto */
+            width: 100px;
+            height: 90px;
+            border-radius: 50%;
+            background: rgb(19, 54, 19);
         }
 
         .layer-9{
@@ -151,26 +183,67 @@
             z-index: 9;
             /* definimos el tamanio de la nube 9 */
             height: 90px;
-            width: 100px;
+            width: 70px;
             /* definimos el color y posicion de la nube 9*/
-            background: white;
+            background: rgb(241, 240, 240);
             bottom: 0;
             left: 0;
-            border-radius: 10px;
+            border-radius: 40px;
+        }
+        .layer-9B{
+            position: absolute;
+            z-index: 9;
+            /* definimos el tamanio de la nube 9 */
+            height: 60px;
+            width: 100px;
+            /* definimos el color y posicion de la nube 9*/
+            background: rgb(241, 240, 240);
+            bottom: 0;
+            left: 0;
+            border-radius: 40px;
         }
 
         .layer-10{
             position: absolute;
             z-index: 10;
             /* definimos el tamanio de la nube 10 */
-            height: 90px;
+            height: 65px;
             width: 100px;
             /* definimos el color y posicion de la nube 10*/
-            background: white;
+            background: rgb(241, 240, 240);
             bottom: 0;
             right: 0;
-            border-radius: 10px;
+            border-radius: 40px;
 
+        }
+        .layer-10B{
+            position: absolute;
+            z-index: 10;
+            /* definimos el tamanio de la nube 10 */
+            height: 100px;
+            width: 70px;
+            /* definimos el color y posicion de la nube 10*/
+            background: rgb(241, 240, 240);
+            bottom: 0;
+            right: 0;
+            border-radius: 40px;
+        }
+
+        .layer-11{
+            /* marco del tlefono */
+            z-index: 11;
+            position: absolute;
+            /* definimos las medidas, color, etc del div */
+            border: 8px solid rgb(23, 2, 99);
+            border-radius: 20px;
+            width: 285px;
+            height: 585px;
+            
+            /* agregamos efecto de sombra del telefono */
+            box-shadow:
+            0 19px 38px rgba(0, 0,0, 0.30),
+            0 15px 12px rgba(0, 0, 0, 0.22)            
+            
         }
 
         /* estilizando el conejos */
@@ -233,18 +306,52 @@
             background: cyan;
             border-radius: 50%;
             width: 4px;
-            height: 4px;
+            height: 4px; /*aplicaremos el efecto de parpadeo a esta propiedad el cual tiene un estado inicial de 4px!!!*/
             position: absolute;
             top: 15px;
+        
+        /* Efecto de parpadero con un minimo error de parpadeo */
+        animation-name: blink;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        /* fin-Efecto de parpadero con un minimo error de parpadeo */
         }
+        @keyframes blink{
+        /* aplicremos el efecto al height a la latura del los ojos! */
+            0%{
+                height: 4px;
+            }
+            5%{
+                /* Nota : la transicion es tosca parece que el ojo parpadea hacia arriba -> solucion con una transformacion y transaldo*/
+                transform: translate(0px, 2px);
+                /* 2px en en relacion al tamanio del ojo 4px -> como el error es que se mueve hacia arriba y en este caso se movera abajo al tener 2px positivo!  */
+                height: 1px;
+            }
+            10%{ 
+                /* 2px en en relacion al tamanio del ojo 4px  */
+                transform: translate(0px, 0px);
+                /* 0px lograremos que regrese a su posicion inicial */
+                height: 4px;
+            }
+        }
+
+
         .head_eye--left{
             left: 20px;
         }
         .head_eye--right{
             right: 20px;
         }
+            
+        .layer-3, .layer-5, .layer-7{
+            /* agregamos efecto de sombra del telefono */
+            box-shadow:
+                0 19px 38px rgba(240, 237, 237, 0.85),
+                0 15px 12px rgba(240, 237, 237, 0.85)
+            ;
+        }
 
-</style>
+    </style>
 
 </head>
 <body>
@@ -254,7 +361,12 @@
     <div class="phone">
     <!-- los hijos tendran posicionamiento absoluto para que se adiera (se mueva junto) al relativo -->
     
-    <!--Bunny 1-->
+    <!-- moon -->
+        <div class="moon"></div>
+    <!-- fin-moon -->
+
+
+    <!-- Bunny1 -->
         <div class="layer-1">
             <!-- defino las ojejas -->
             <div class="left-ear--outer"></div>
@@ -268,18 +380,69 @@
                 <div class="head_eye head_eye--right"></div>
             </div>
         </div>
-    <!--fin Bunny 1-->
+    <!-- fin-Bunny1 -->
 
-
-        <div class="layer-2"></div>
+    <!-- Bunny2 -->
+        <div class="layer-2">
+            <!-- defino las ojejas -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <!-- defino la cabeza -->
+            <div class="head">
+                <!-- defino los ojos, donde el espacion me permite darle mejor estilos -->
+                <div class="head_eye head_eye--left"></div>
+                <div class="head_eye head_eye--right"></div>
+            </div>
+        </div>
+    <!-- fin-Bunny2 -->
+    
         <div class="layer-3"></div>
-        <div class="layer-4"></div>
+    
+    <!-- Bunny3 -->
+        <div class="layer-4">
+            <!-- defino las ojejas -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <!-- defino la cabeza -->
+            <div class="head">
+                <!-- defino los ojos, donde el espacion me permite darle mejor estilos -->
+                <div class="head_eye head_eye--left"></div>
+                <div class="head_eye head_eye--right"></div>
+            </div>           
+        </div>
+    <!-- fin-Bunny3 -->
+    
         <div class="layer-5"></div>
-        <div class="layer-6"></div>
+
+    <!-- Bunny4 -->    
+        <div class="layer-6">
+            <!-- defino las ojejas -->
+            <div class="left-ear--outer"></div>
+            <div class="left-ear--inner"></div>
+            <div class="right-ear--outer"></div>
+            <div class="right-ear--inner"></div>
+            <!-- defino la cabeza -->
+            <div class="head">
+                <!-- defino los ojos, donde el espacion me permite darle mejor estilos -->
+                <div class="head_eye head_eye--left"></div>
+                <div class="head_eye head_eye--right"></div>
+            </div>   
+        </div>
+    <!-- fin-Bunny4 -->
+
         <div class="layer-7"></div>
         <div class="layer-8"></div>
+        <div class="layer-8b"></div>
+        <div class="layer-8c"></div>
         <div class="layer-9"></div>
+        <div class="layer-9B"></div>
         <div class="layer-10"></div>
+        <div class="layer-10B"></div>
+        <div class="layer-11"></div>
     </div>
 </body>
 </html>
